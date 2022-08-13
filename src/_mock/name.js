@@ -3,7 +3,7 @@
 export const fullName = [
   'Jayvion Simon',
   'Lucian Obrien',
-  'Deja Brady',
+  'James Ian Villanueva',
   'Harrison Stein',
   'Reece Chung',
   'Lainey Davidson',

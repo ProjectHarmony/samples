@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Button, Box, Link, Container, Typography, Stack, Grid } from '@mui/material';
+import { Button, Box, Link, Container, Typography, Stack, Grid, Paper, Card } from '@mui/material';
 // routes
 import { PATH_DASHBOARD } from '../../routes/paths';
 // components
@@ -10,6 +10,8 @@ import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
 import TextIconLabel from '../../components/TextIconLabel';
 import { MotionContainer, varFade } from '../../components/animate';
+
+
 
 // ----------------------------------------------------------------------
 
@@ -39,6 +41,8 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
     margin: 'unset',
     textAlign: 'left',
   },
+  backgroundColor: 'rgba(51, 78, 111, 0.8)',
+  padding: '4em',
 }));
 
 const HeroOverlayStyle = styled(m.img)({
@@ -57,47 +61,50 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
   width: '100%',
   margin: 'auto',
   position: 'absolute',
-  [theme.breakpoints.up('lg')]: {
+ /*  [theme.breakpoints.up('lg')]: {
     right: '8%',
     width: 'auto',
     height: '48vh',
-  },
+  }, */
+}));
+
+const monStyle = styled((props) => <Typography variant="h2" {...props} />)(({ theme }) => ({
+    color: 'red',
+    zIndex: 99,
 }));
 
 // ----------------------------------------------------------------------
 
-export default function HomeHero() {
+export default function LandingFirstPage() {
   return (
     <MotionContainer>
       <RootStyle>
-        <HeroOverlayStyle alt="overlay" src="/assets/overlay.svg" variants={varFade().in} />
+        {/* <HeroOverlayStyle alt="" src="" variants={varFade().in} /> */}
 
-        <HeroImgStyle
+         <HeroImgStyle
           alt="hero"
-          src="/assets/ship.png"
+          src="https://images.unsplash.com/photo-1585713181935-d5f622cc2415?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
           variants={varFade().inUp}
-        />
-
+        /> 
+    
         <Container>
+        <m.div variants={varFade().inUp}>
           <ContentStyle>
           <Grid>
             <m.div variants={varFade().inRight}>
-            
-              <Typography variant="h3" sx={{ color: 'common.white' }}>
-                Need Quotation for your product?<br />welcome to
                 <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
-                  &nbsp;Batiboot.
+                  Welcome to BATIBOOT.
                 </Typography>
-              </Typography>
+
             </m.div>
 
+
             <m.div variants={varFade().inRight}>
-              <Typography variant="h3" sx={{ color: 'common.white' }}>
+              <Typography variant="h4" m sx={{ color: 'common.white' }}>
                 Your secured shipping lorem ipsum
               </Typography>
-           
             </m.div>
-          
+            
             {/* <Stack spacing={2.5} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
              
 
@@ -149,8 +156,17 @@ export default function HomeHero() {
               </Stack> */}
             </m.div>
             </Grid>
+         
           </ContentStyle>
+          </m.div>
+          {/* <Grid container spacing={1} sx={{mt: '2em'}}>
+                <Grid md={3}><Card sx={{zIndex: 99, ml: 2, mr: 2,}}>asdasdas</Card></Grid>
+                <Grid md={3}><Card sx={{zIndex: 99, ml: 2, mr: 2,}}>asdasdas</Card></Grid>
+                <Grid md={3}><Card sx={{zIndex: 99, ml: 2, mr: 2,}}>asdasdas</Card></Grid>
+                <Grid md={3}><Card sx={{zIndex: 99, ml: 2, mr: 2,}}>asdasdas</Card></Grid>
+            </Grid> */}
         </Container>
+        
       </RootStyle>
       <Box sx={{ height: { md: '100vh' } }} />
     </MotionContainer>

@@ -10,16 +10,26 @@ import { MotionViewport, varFade } from '../../components/animate';
 export default function AboutVision() {
   return (
     <Container component={MotionViewport} sx={{ mt: 10, mb: 10 }}>
-       <Grid container justifyContent="center">
-        <Grid item xs={12} sm={8}>
-          <m.div variants={varFade().inUp}>
-            <Typography variant="h3" sx={{ textAlign: 'center' }}>
+       <Grid container justifyContent="left">
+        <Grid item xs={12} sm={5} sx={{mr: 11}}>
+        <m.div variants={varFade().inUp}>
+            <Typography variant="h3" sx={{ textAlign: 'left', mb: 2 }}>
               OUR AREA OF OPERATIONS
             </Typography>
           </m.div>
+        
+          <m.div variants={varFade().inUp}>
+            <Typography variant="h5" sx={{ textAlign: 'left'}}>
+              Operation Place #1:
+            </Typography>
+            <Typography variant='caption'>
+            送货地址：深圳市宝安区福海街道大洋田社区皓鹏智慧园A栋 1楼自编88号仓 导航地址：大洋田浩鹏智慧园 Delivery address: 1 / F, Building A, Hao Peng Wisdom Park, Dayangtian Community, Fuhai Street, Bao'an District, Shenzhen Navigation address: Haopeng Wisdom Garden, Dayangtian 送货地址：深圳市宝安区福海街道大洋田社区皓鹏智慧园A栋 1楼自编88号仓 导航地址：大洋田浩鹏智慧园 收货时间：周一 至 周六（AM9:00~PM18：00)
+            </Typography>
+          </m.div>
         </Grid>
-      </Grid>
-      <Box
+       
+        <Grid item xs={12} sm={6}>
+        <Box
         sx={{
           mb: 10,
           position: 'relative',
@@ -32,6 +42,10 @@ export default function AboutVision() {
           alt="about-vision"
           effect="black-and-white"
         />
+            </Box>
+        </Grid>
+      </Grid>
+     
 
     {/*     <Box
           sx={{
@@ -57,7 +71,7 @@ export default function AboutVision() {
             </m.div>
           ))}
         </Box> */}
-      </Box>
+  
 
      
     </Container>

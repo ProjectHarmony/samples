@@ -11,19 +11,34 @@ import { MotionViewport, varFade } from '../../components/animate';
 const CARDS = [
   {
     icon: 'https://minimal-assets-api-dev.vercel.app/assets/icons/ic_design.svg',
-    title: 'UI & UX Design',
+    title: 'First Service',
     description:
-      'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     icon: 'https://minimal-assets-api-dev.vercel.app/assets/icons/ic_code.svg',
-    title: 'Development',
-    description: 'Easy to customize and extend each component, saving you time and money.',
+    title: 'Second Service',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
   {
     icon: '/logo/logo_single.svg',
-    title: 'Branding',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    title: 'Third Service',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    icon: '/logo/logo_single.svg',
+    title: 'Fourth Service',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    icon: '/logo/logo_single.svg',
+    title: 'Fifth Service',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    icon: '/logo/logo_single.svg',
+    title: 'Sixth Service',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   },
 ];
 
@@ -56,11 +71,12 @@ const CardStyle = styled(Card)(({ theme }) => {
     },
     '&.cardLeft': {
       [theme.breakpoints.up('md')]: { marginTop: -40 },
+      backgroundColor: "#f5a536",
     },
     '&.cardCenter': {
       [theme.breakpoints.up('md')]: {
-        marginTop: -80,
-        backgroundColor: theme.palette.background.paper,
+        marginTop: -40,
+        backgroundColor: "theme.palette.background.paper",
         boxShadow: `-40px 40px 80px 0 ${shadowCard(0.4)}`,
         '&:before': {
           top: 0,
@@ -74,7 +90,7 @@ const CardStyle = styled(Card)(({ theme }) => {
           width: 'calc(100% - 40px)',
           height: 'calc(100% - 40px)',
           borderRadius: Number(theme.shape.borderRadius) * 2,
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: "theme.palette.background.paper",
           boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`,
         },
       },
@@ -84,7 +100,7 @@ const CardStyle = styled(Card)(({ theme }) => {
 
 // ----------------------------------------------------------------------
 
-export default function HomeMinimal() {
+export default function LandingSecondPage() {
   const theme = useTheme();
 
   const isLight = theme.palette.mode === 'light';
@@ -98,13 +114,14 @@ export default function HomeMinimal() {
             mb: { xs: 10, md: 25 },
           }}
         >
-          <m.div variants={varFade().inUp}>
-            <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
-              Minimal
-            </Typography>
+         
+          <m.div variants={varFade().inUp} >
+            <Typography variant="h2" sx={{ mb: 2, color: 'orange' }}>SPECIAL SERVICES</Typography>
           </m.div>
           <m.div variants={varFade().inDown}>
-            <Typography variant="h2">What minimal helps you?</Typography>
+            <Typography component="div" variant="overline" sx={{ mb: 2, color: 'gray' }}>
+            Globally known for our ability to handle every last detail of our customers’ particular logistics and forwarding needs, TransCargo’s Special Services team takes care of all your logistics.
+            </Typography>
           </m.div>
         </Box>
 
@@ -117,7 +134,7 @@ export default function HomeMinimal() {
         >
           {CARDS.map((card, index) => (
             <m.div variants={varFade().inUp} key={card.title}>
-              <CardStyle className={(index === 0 && 'cardLeft') || (index === 1 && 'cardCenter') || ''}>
+              <CardStyle className={(index === 0 && 'cardLeft') || (index === 1 && 'cardLeft') || (index === 2 && 'cardLeft') || (index === 3 && 'cardLeft') || (index === 4 && 'cardLeft') || (index === 5 && 'cardLeft') }>
                 <Image
                   src={card.icon}
                   alt={card.title}

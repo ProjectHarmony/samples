@@ -153,7 +153,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
               px: 3,
               pt: 5,
               pb: 3,
-              right: 16,
+              right: 1,
               m: 'auto',
               borderRadius: 2,
               maxWidth: (theme) => theme.breakpoints.values.lg,

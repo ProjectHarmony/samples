@@ -7,15 +7,16 @@ import { Box, Button, Container, Typography, Grid, Stack, TextField } from '@mui
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
 import { MotionViewport, varFade } from '../../components/animate';
+import { ContactForm, ContactMap } from '../contact';
 
 
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(10, 0),
+  paddingTop: theme.spacing(8),
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(15, 0),
+    paddingTop: theme.spacing(11),
   },
 }));
 

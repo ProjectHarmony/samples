@@ -66,7 +66,7 @@ const variantScreenRight = {
 
 // ----------------------------------------------------------------------
 
-export default function AboutUs() {
+export default function LandingThirdPage() {
   const theme = useTheme();
 
   const isLight = theme.palette.mode === 'light';
@@ -85,74 +85,44 @@ export default function AboutUs() {
         <Grid container spacing={5} justifyContent="center">
           <Grid item xs={12} md={4} sx={{ display: 'flex', alignItems: 'center' }}>
             <ContentStyle>
-              {/* <m.div variants={varFade().inUp}>
-                <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
-                  Interface Starter Kit
-                </Typography>
-              </m.div> */}
-
+      
               <m.div variants={varFade().inUp}>
-                <Typography variant="h2" sx={{ mb: 3 }}>
-                  About Us <br />
+                <Typography variant="h3" sx={{ mb: 3 }}>
+                  WELCOME TO OUR WEBSITE!
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography
                   sx={{
-                    mb: 8,
+                    mb: 5,
                     color: isLight ? 'text.secondary' : 'common.white',
                   }}
                 >
-                  Transcargo makes business flow. As one of the world’s leading non-asset-based supply chain management
-                  companies, we design and implement industry-leading solutions in both freight management.
-                  <br />
-                  <br />
-                  Over 42,000 dedicated employees, working in 17 regional clusters around the globe, deliver operational
-                  excellence — to provide viable answers to the most challenging supply chain questions.
+                  Transcargo makes business flow. As one of the world’s leading non-asset-based supply chain management companies, we design and implement industry-leading solutions in both freight management.<br/><br/>
+                  Over 42,000 dedicated employees, working in 17 regional clusters around the globe, deliver operational excellence — to provide viable answers to the most challenging supply chain questions.
                 </Typography>
-              </m.div>
-
-              <m.div variants={varFade().inUp}>
-                <Button
-                  size="large"
-                  color="inherit"
-                  variant="outlined"
-                  target="_blank"
-                  rel="noopener"
-                  href="../about-us"
-                >
-                  See More
-                </Button>
               </m.div>
             </ContentStyle>
           </Grid>
 
           <Grid item xs={12} md={8} dir="ltr">
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
+          <m.div variants={varFade().inUp}> 
+            <Box 
+            sx={{
+                mb: 10,
                 position: 'relative',
-                justifyContent: 'center',
-              }}
-            >
-              <m.div variants={varFade().inUp}>
-                <Box
-                  sx={{
-                    mb: 10,
-                    position: 'relative',
-                    borderRadius: 2,
-                    overflow: 'hidden',
-                  }}
-                >
+                borderRadius: 2,
+                overflow: 'hidden',
+              }}>
                   <Image
-                    src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
-                    alt="hero"
+                    disabledEffect
+                    alt={`hero`}
+                    transition={{ duration: 0.72, ease: 'easeOut' }}
+                    src={"https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}
                   />
-                </Box>
-              </m.div>
             </Box>
+            </m.div>
           </Grid>
         </Grid>
       </Container>

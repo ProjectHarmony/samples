@@ -1,5 +1,6 @@
 // @mui
 import { styled } from '@mui/material/styles';
+
 // components
 import Page from '../components/Page';
 // sections
@@ -13,6 +14,9 @@ import {
   HomeAdvertisement,
   HomeCleanInterfaces,
   AboutUs,
+  LandingFirstPage,
+  LandingSecondPage,
+  LandingThirdPage,
 } from '../sections/home';
 
 // ----------------------------------------------------------------------
@@ -28,9 +32,12 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function HomePage() {
   return (
     <Page title="Batiboot: Logistics">
-      <HomeHero />
+      <LandingFirstPage />
       <ContentStyle>
-        <HomeMinimal />
+        <LandingThirdPage />
+        <LandingSecondPage />
+
+        {/* <HomeMinimal /> */}
        <AboutUs />
        <ContactUs />
       </ContentStyle>
