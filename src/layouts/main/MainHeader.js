@@ -41,6 +41,8 @@ const ToolbarShadowStyle = styled('div')(({ theme }) => ({
   position: 'absolute',
   width: `calc(100% - 48px)`,
   boxShadow: theme.customShadows.z8,
+  
+  
 }));
 
 // ----------------------------------------------------------------------
@@ -57,7 +59,7 @@ export default function MainHeader() {
   const isHome = pathname === '/';
 
   return (
-    <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent' }}>
+    <AppBar sx={{ boxShadow: 0, bgcolor: 'white', color:'black' }}>
       <ToolbarStyle
         disableGutters
         sx={{
@@ -83,14 +85,13 @@ export default function MainHeader() {
 
           {isDesktop && <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />}
 
-         {/*  <Button
+          <Button
             variant="contained"
             target="_blank"
             rel="noopener"
-            href="https://material-ui.com/store/items/minimal-dashboard/"
-          >
-            Purchase Now
-          </Button> */}
+            href="./page/Quotation">
+            Need Quotation?
+          </Button>
 
           {!isDesktop && <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />}
         </Container>

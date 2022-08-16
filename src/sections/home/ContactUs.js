@@ -8,6 +8,7 @@ import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
 import { MotionViewport, varFade } from '../../components/animate';
 import { ContactForm, ContactMap } from '../contact';
+import { FaqsList } from '../faqs';
 
 
 
@@ -26,38 +27,17 @@ export default function HomeLookingFor() {
   return (
     <RootStyle>
       <Container component={MotionViewport}>
-      <Stack component={MotionViewport} spacing={5}>
-      <m.div variants={varFade().inUp}>
-        <Typography variant="h3">
-          Feel free to contact us. <br />
-          We'll be glad to hear from you, buddy.
-        </Typography>
-      </m.div>
-
-      <Stack spacing={3}>
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Name" />
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Email" />
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Subject" />
-        </m.div>
-
-        <m.div variants={varFade().inUp}>
-          <TextField fullWidth label="Enter your message here." multiline rows={4} />
-        </m.div>
-      </Stack>
-
-      <m.div variants={varFade().inUp}>
-        <Button size="large" variant="contained">
-          Submit Now
-        </Button>
-      </m.div>
-    </Stack>
+      <Grid container justifyContent="left">
+      <Grid item xs={12} md={5} sx={{mr: 10}}>
+      <ContactForm />
+      </Grid>
+      <Grid item xs={12} md={6} sx={{mt: 10}}>
+      <Typography variant="h3" sx={{ mb: 5 }}>
+            Frequently asked questions
+          </Typography>
+      <FaqsList />
+      </Grid>
+      </Grid>
       </Container>
     </RootStyle>
   );

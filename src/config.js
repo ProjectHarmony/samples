@@ -70,8 +70,8 @@ export const defaultSettings = {
   themeDirection: 'ltr',
   themeContrast: 'default',
   themeLayout: 'horizontal',
-  themeColorPresets: 'default',
-  themeStretch: false,
+  themeColorPresets: 'orange',
+  themeStretch: true,
 };
 
 // MULTI LANGUAGES

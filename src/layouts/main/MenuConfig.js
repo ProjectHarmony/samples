@@ -20,9 +20,14 @@ const menuConfig = [
   },
 
   {
-    title: 'About',
+    title: 'About Us',
     icon: <Iconify icon={'eva:file-fill'} {...ICON_SIZE} />,
     path: '/about-us',
+  },
+  {
+    title: 'Our Services',
+    icon: <Iconify icon={'eva:file-fill'} {...ICON_SIZE} />,
+    path: '/services',
   },
 
   {
@@ -91,7 +96,7 @@ const menuConfig = [
     ],
   }, */
  /*  {
-    title: 'Documentation',
+    title: 'Need Quotation?',
     icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
     path: PATH_DOCS,
   }, */

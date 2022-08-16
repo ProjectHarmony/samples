@@ -83,6 +83,33 @@ export default function AboutUs() {
     <RootStyle>
       <Container component={MotionViewport}>
         <Grid container spacing={5} justifyContent="center">
+
+          <Grid item xs={12} md={8} dir="ltr">
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                position: 'relative',
+                justifyContent: 'center',
+              }}
+            >
+              <m.div variants={varFade().inUp}>
+                <Box
+                  sx={{
+                    mb: 10,
+                    position: 'relative',
+                    borderRadius: 2,
+                    overflow: 'hidden',
+                  }}
+                >
+                  <Image
+                    src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+                    alt="hero"
+                  />
+                </Box>
+              </m.div>
+            </Box>
+          </Grid>
           <Grid item xs={12} md={4} sx={{ display: 'flex', alignItems: 'center' }}>
             <ContentStyle>
               {/* <m.div variants={varFade().inUp}>
@@ -128,32 +155,6 @@ export default function AboutUs() {
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} md={8} dir="ltr">
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                position: 'relative',
-                justifyContent: 'center',
-              }}
-            >
-              <m.div variants={varFade().inUp}>
-                <Box
-                  sx={{
-                    mb: 10,
-                    position: 'relative',
-                    borderRadius: 2,
-                    overflow: 'hidden',
-                  }}
-                >
-                  <Image
-                    src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
-                    alt="hero"
-                  />
-                </Box>
-              </m.div>
-            </Box>
-          </Grid>
         </Grid>
       </Container>
     </RootStyle>

@@ -6,7 +6,7 @@ import Page from '../components/Page';
 // sections
 import {
   HomeHero,
-  HomeMinimal,
+/*   HomeMinimal, */
   HomeDarkMode,
   ContactUs,
   HomeColorPresets,
@@ -17,6 +17,7 @@ import {
   LandingFirstPage,
   LandingSecondPage,
   LandingThirdPage,
+  LandingSlider,
 } from '../sections/home';
 
 // ----------------------------------------------------------------------
@@ -32,12 +33,12 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function HomePage() {
   return (
     <Page title="Batiboot: Logistics">
+      
       <LandingFirstPage />
       <ContentStyle>
+      {/* <LandingSlider /> */}
         <LandingThirdPage />
-        <LandingSecondPage />
-
-        {/* <HomeMinimal /> */}
+        {/* <LandingSecondPage /> */}
        <AboutUs />
        <ContactUs />
       </ContentStyle>

@@ -11,10 +11,10 @@ const RootStyle = styled('div')(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundImage:
-    'url(https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)',
+    ' url(https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 320,
+    height: 360,
     padding: 0,
   },
 }));
@@ -30,15 +30,22 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function AboutHero() {
+export default function ServicesHero() {
   return (
     <RootStyle>
+      
       <Container component={MotionContainer} sx={{ position: 'relative', height: '100%' }}>
+      <m.div variants={varFade().inRight}>
         <ContentStyle>
-          <TextAnimate text="About" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
+          {/* <TextAnimate text="Our" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
           <br />
           <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
-            <TextAnimate text="Batibot" sx={{ mr: 2 }} />
+            <TextAnimate text="Services" sx={{ mr: 2 }} />
+          </Box> */}
+          <TextAnimate text="Our" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
+          <br />
+          <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
+            <TextAnimate text="Services" sx={{ mr: 2 }} />
           </Box>
 
           <m.div variants={varFade().inRight}>
@@ -55,6 +62,7 @@ export default function AboutHero() {
             </Typography> */}
           </m.div>
         </ContentStyle>
+        </m.div>
       </Container>
     </RootStyle>
   );
