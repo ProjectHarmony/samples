@@ -84,7 +84,7 @@ export default function AboutUs() {
       <Container component={MotionViewport}>
         <Grid container spacing={5} justifyContent="center">
 
-          <Grid item xs={12} md={8} dir="ltr">
+          <Grid item xs={12} md={7} dir="ltr">
             <Box
               sx={{
                 display: 'flex',
@@ -110,7 +110,7 @@ export default function AboutUs() {
               </m.div>
             </Box>
           </Grid>
-          <Grid item xs={12} md={4} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} md={5} sx={{ display: 'flex', alignItems: 'center' }}>
             <ContentStyle>
               {/* <m.div variants={varFade().inUp}>
                 <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.disabled' }}>
@@ -119,7 +119,7 @@ export default function AboutUs() {
               </m.div> */}
 
               <m.div variants={varFade().inUp}>
-                <Typography variant="h2" sx={{ mb: 3 }}>
+                <Typography variant="h2" sx={{ mb: 3, mt:-13 }}>
                   About Us <br />
                 </Typography>
               </m.div>

@@ -38,7 +38,7 @@ export default function AboutHero() {
           <TextAnimate text="About" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
           <br />
           <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
-            <TextAnimate text="Batibot" sx={{ mr: 2 }} />
+            <TextAnimate text="Batiboot" sx={{ mr: 2 }} />
           </Box>
 
           <m.div variants={varFade().inRight}>

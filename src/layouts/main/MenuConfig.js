@@ -16,7 +16,7 @@ const menuConfig = [
   {
     title: 'Home',
     icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
-    path: '/',
+    path: '/home2',
   },
 
   {

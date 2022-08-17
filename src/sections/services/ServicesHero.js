@@ -35,13 +35,7 @@ export default function ServicesHero() {
     <RootStyle>
       
       <Container component={MotionContainer} sx={{ position: 'relative', height: '100%' }}>
-      <m.div variants={varFade().inRight}>
         <ContentStyle>
-          {/* <TextAnimate text="Our" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
-          <br />
-          <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
-            <TextAnimate text="Services" sx={{ mr: 2 }} />
-          </Box> */}
           <TextAnimate text="Our" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
           <br />
           <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
@@ -62,7 +56,6 @@ export default function ServicesHero() {
             </Typography> */}
           </m.div>
         </ContentStyle>
-        </m.div>
       </Container>
     </RootStyle>
   );

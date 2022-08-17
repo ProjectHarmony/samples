@@ -39,7 +39,7 @@ export default function MainLayout() {
             <Typography variant="caption" component="p">
               Batiboot
               <br /> Contact Us&nbsp;
-              <Link href="https://www.facebook.com/batiboot">Here</Link>
+              <Link href="">Here</Link>
             </Typography>
           </Container>
         </Box>

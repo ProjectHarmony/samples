@@ -13,6 +13,7 @@ import { PATH_AFTER_LOGIN } from '../config';
 // components
 import LoadingScreen from '../components/LoadingScreen';
 
+
 // ----------------------------------------------------------------------
 
 const Loadable = (Component) => (props) => {
@@ -157,10 +158,11 @@ export default function Router() {
       path: '/',
       element: <MainLayout />,
       children: [
-        { element: <HomePage />, index: true },
+        { element: <Home2 />, index: true },
         { path: 'about-us', element: <About /> },
         { path: 'contact-us', element: <Contact /> },
         { path: 'services', element: < Services/>},
+        { path: 'home2', element: <Home2/> },
         { path: 'faqs', element: <Faqs /> },
       ],
     },
@@ -226,6 +228,7 @@ const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const Services = Loadable(lazy(() => import('../pages/Services')))
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));
 const Maintenance = Loadable(lazy(() => import('../pages/Maintenance')));
+const Home2 = Loadable(lazy(() => import('../pages/Home2')));
 const Pricing = Loadable(lazy(() => import('../pages/Pricing')));
 const Payment = Loadable(lazy(() => import('../pages/Payment')));
 const Page500 = Loadable(lazy(() => import('../pages/Page500')));
