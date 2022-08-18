@@ -4,13 +4,17 @@ import { alpha, useTheme, styled } from '@mui/material/styles';
 import { Box, Grid, Button, Container, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
+import { _bookings, _bookingNew, _bookingsOverview, _bookingReview } from '../../_mock';
 import { MotionViewport, varFade } from '../../components/animate';
+import { BookingIllustration, CheckInIllustration, CheckOutIllustration } from '../../assets';
+import { SpecialServicesSlider } from '.';
+
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(12, 0),
-  
+  padding: theme.spacing(5, 0),
+  backgroundColor: '#005a87',
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -19,13 +23,11 @@ const ContentStyle = styled('div')(({ theme }) => ({
   marginBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
-    marginBottom: 0,
   },
 }));
 
 const ScreenStyle = styled(m.div)(({ theme }) => ({
   paddingRight: 2,
-  paddingBottom: 1,
   maxWidth: 160,
   borderRadius: 8,
   backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
@@ -67,7 +69,7 @@ const variantScreenRight = {
 
 // ----------------------------------------------------------------------
 
-export default function LandingThirdPage() {
+export default function SpecialServices() {
   const theme = useTheme();
 
   const isLight = theme.palette.mode === 'light';
@@ -82,48 +84,23 @@ export default function LandingThirdPage() {
 
   return (
     <RootStyle>
-      <Container component={MotionViewport}>
+      <Container component={MotionViewport} sx={{ marginTop: 10 }}>
         <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
-            <ContentStyle>
-      
-              <m.div variants={varFade().inUp}>
-                <Typography variant="h3" sx={{ mb: 5 }}>
-                  WELCOME TO OUR WEBSITE!
+          <Grid item xs={12}>
+            <Grid container spacing={2}>
+              <Grid item xs={3}>
+                <Typography variant="h3" sx={{ mb: 5, color: 'common.white' }}>
+                  SPECIAL SERVICES
                 </Typography>
-              </m.div>
-
-              <m.div variants={varFade().inUp}>
-                <Typography
-                  sx={{
-                    mb: 5,
-                    color: isLight ? 'text.secondary' : 'common.white',
-                  }}
-                >
-                  Transcargo makes business flow. As one of the world’s leading non-asset-based supply chain management companies, we design and implement industry-leading solutions in both freight management.<br/><br/>
-                  Over 42,000 dedicated employees, working in 17 regional clusters around the globe, deliver operational excellence — to provide viable answers to the most challenging supply chain questions.
+                <Typography sx={{ mb: 5, color: 'common.white' }}>
+                  Globally known for our ability to handle every last detail of our customers’ particular logistics and
+                  forwarding needs, TransCargo’s Special Services team takes care of all your logistics.
                 </Typography>
-              </m.div>
-            </ContentStyle>
-          </Grid>
-
-          <Grid item xs={12} md={6} dir="ltr">
-          <m.div variants={varFade().inUp}> 
-            <Box 
-            sx={{
-                mb: 10,
-                position: 'relative',
-                borderRadius: 2,
-                overflow: 'hidden',
-              }}>
-                  <Image
-                    disabledEffect
-                    alt={`hero`}
-                    transition={{ duration: 0.72, ease: 'easeOut' }}
-                    src={"https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"}
-                  />
-            </Box>
-            </m.div>
+              </Grid>
+              <Grid item xs={9}>
+                <SpecialServicesSlider title="Newest Booking" subheader="12 Booking" list={_bookingNew} />
+              </Grid> 
+            </Grid>
           </Grid>
         </Grid>
       </Container>

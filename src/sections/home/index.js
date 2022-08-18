@@ -13,3 +13,7 @@ export { default as LandingThirdPage } from './LandingThirdPage';
 /* export { default as LandingSlider } from './LandingSlider'; */
 export { default as ServicesButton } from './ServicesButton';
 export { default as TransitionOne } from './TransitionOne';
+export { default as LandingCounts } from './LandingCounts';
+export { default as SpecialServices } from './SpecialServices';
+export { default as SpecialServicesSlider } from './SpecialServicesSlider';
+

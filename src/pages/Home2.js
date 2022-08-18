@@ -4,20 +4,24 @@ import { Divider } from '@mui/material';
 // components
 import Page from '../components/Page';
 import { AboutHero, AboutWhat, AboutTeam, AboutVision, AboutTestimonials } from '../sections/about';
+import { _appFeatured, _appAuthors, _appInstalled, _appRelated, _appInvoices } from '../_mock';
 import {
-    HomeHero,
+  HomeHero,
   /*   HomeMinimal, */
-    HomeDarkMode,
-    ContactUs,
-    HomeColorPresets,
-    HomePricingPlans,
-    HomeAdvertisement,
-    HomeCleanInterfaces,
-    AboutUs,
-    LandingFirstPage,
-    LandingSecondPage,
-    LandingThirdPage,
-  } from '../sections/home';
+  HomeDarkMode,
+  ContactUs,
+  HomeColorPresets,
+  HomePricingPlans,
+  HomeAdvertisement,
+  HomeCleanInterfaces,
+  AboutUs,
+  LandingFirstPage,
+  LandingSecondPage,
+  LandingThirdPage,
+  TransitionOne,
+  LandingCounts,
+  SpecialServices,
+} from '../sections/home';
 
 // ----------------------------------------------------------------------
 
@@ -29,11 +33,10 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
-    overflow: 'hidden',
-    position: 'relative',
-    backgroundColor: theme.palette.background.default,
-  }));
-  
+  overflow: 'hidden',
+  position: 'relative',
+  backgroundColor: theme.palette.background.default,
+}));
 
 // ----------------------------------------------------------------------
 
@@ -41,15 +44,15 @@ export default function Home2() {
   return (
     <Page title="Home">
       <RootStyle>
-        <LandingFirstPage />
-         <ContentStyle>
-      {/* <LandingSlider /> */}
-        <LandingThirdPage />
-        {/* <LandingSecondPage /> */}
-       <AboutUs />
-       <ContactUs />
-      </ContentStyle>
-       
+        <TransitionOne list={_appFeatured} />
+        <ContentStyle>
+          {/* <LandingSlider /> */}
+          <LandingThirdPage />
+          <LandingCounts />
+          <SpecialServices />
+          <AboutUs />
+          <ContactUs />
+        </ContentStyle>
       </RootStyle>
     </Page>
   );

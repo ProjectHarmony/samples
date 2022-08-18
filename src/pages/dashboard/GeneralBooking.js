@@ -116,7 +116,7 @@ export default function GeneralBooking() {
             />
           </Grid>
 
-          <Grid item xs={12}>
+          <Grid item xs={9}>
             <BookingNewestBooking title="Newest Booking" subheader="12 Booking" list={_bookingNew} />
           </Grid>
 

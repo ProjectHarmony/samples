@@ -38,9 +38,9 @@ export const _appInvoices = [...Array(5)].map((_, index) => ({
   status: randomInArray(['paid', 'out_of_date', 'in_progress']),
 }));
 
-export const _appFeatured = [...Array(3)].map((_, index) => ({
+export const _appFeatured = [...Array(6)].map((_, index) => ({
   id: _mock.id(index),
-  title: ['Harry Potter and the Deathly Hallows - Part 2', 'Disney Zombies 2', 'Lightroom mobile - Koloro'][index],
+  title: ['Harry Potter and the Deathly Hallows - Part 2', 'Disney Zombies 2', 'Lightroom mobile - Koloro', 'Title four', 'Title Five', 'Title 6'][index],
   description: _mock.text.title(index),
   image: _mock.image.feed(index),
 }));

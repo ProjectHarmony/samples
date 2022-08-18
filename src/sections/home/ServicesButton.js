@@ -95,7 +95,7 @@ ServicesButton.propTypes = {
 
 const settings = {
   display: 'flex',
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 3,
@@ -111,7 +111,7 @@ const settings = {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true,
+        dots: false,
       },
     },
     {
@@ -226,7 +226,7 @@ export default function ServicesButton({ setRef, onHandle }) {
         </Grid>
             ) : (
       <Grid container spacing={1} sx={{ p: 2, mt: -3 }} component={MotionViewport}>
-        <Grid container spacing={1} sx={{ p: 10, mt: 40 }}>
+        <Grid container spacing={1} sx={{ p: 10, mt: 32 }}>
           <Grid item xs={12} md={12}>
             
             <Slider {...settings}>
