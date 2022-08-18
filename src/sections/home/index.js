@@ -16,4 +16,5 @@ export { default as TransitionOne } from './TransitionOne';
 export { default as LandingCounts } from './LandingCounts';
 export { default as SpecialServices } from './SpecialServices';
 export { default as SpecialServicesSlider } from './SpecialServicesSlider';
-
+export { default as ContactNow } from './ContactNow';
+export { default as CarouselLandingPageOne } from './CarouselLandingPageOne'

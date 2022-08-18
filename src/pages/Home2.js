@@ -21,6 +21,8 @@ import {
   TransitionOne,
   LandingCounts,
   SpecialServices,
+  ContactNow,
+  CarouselLandingPageOne
 } from '../sections/home';
 
 // ----------------------------------------------------------------------
@@ -44,13 +46,14 @@ export default function Home2() {
   return (
     <Page title="Home">
       <RootStyle>
-        <TransitionOne list={_appFeatured} />
+        <CarouselLandingPageOne />
         <ContentStyle>
           {/* <LandingSlider /> */}
           <LandingThirdPage />
           <LandingCounts />
           <SpecialServices />
-          <AboutUs />
+          <ContactNow/>
+          {/* <AboutUs /> */}
           <ContactUs />
         </ContentStyle>
       </RootStyle>

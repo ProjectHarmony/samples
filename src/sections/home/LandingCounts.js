@@ -79,13 +79,13 @@ export default function LandingCounts() {
   const screenRightAnimate = variantScreenRight;
 
   return (
-    <RootStyle sx={{ backgroundColor: '#02c4f0' }}>
+    <RootStyle sx={{ backgroundColor: '#02c4f0'}}>
       <Container component={MotionViewport}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
-                <Image src="\assets\countLogos\done.svg" />
+                <Image src="\assets\countLogos\done.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
                 <Typography sx={{ marginTop: 3 }}>
@@ -98,7 +98,7 @@ export default function LandingCounts() {
           <Grid item xs={12} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
-                <Image src="\assets\countLogos\worldwide.svg" />
+                <Image src="\assets\countLogos\worldwide.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
                 <Typography sx={{ marginTop: 3 }}>
@@ -111,7 +111,7 @@ export default function LandingCounts() {
           <Grid item xs={12} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
-                <Image src="\assets\countLogos\truck.svg" />
+                <Image src="\assets\countLogos\truck.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
                 <Typography sx={{ marginTop: 3 }}>
@@ -125,7 +125,7 @@ export default function LandingCounts() {
           <Grid item xs={12} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
-                <Image src="\assets\countLogos\people.svg" />
+                <Image src="\assets\countLogos\people.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
                 <Typography sx={{ marginTop: 3 }}>
