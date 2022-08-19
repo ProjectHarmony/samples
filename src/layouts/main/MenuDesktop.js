@@ -144,13 +144,13 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
         <Popover
           open={isOpen}
           anchorReference="anchorPosition"
-          anchorPosition={{ top: 80, left: 0 }}
+          anchorPosition={{ top: 80, left: 10, }}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
           transformOrigin={{ vertical: 'top', horizontal: 'center' }}
           onClose={onClose}
           PaperProps={{
             sx: {
-              px: 3,
+              /* px: 3, */
               pt: 5,
               pb: 3,
               right: 1,
@@ -161,12 +161,12 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
             },
           }}
         >
-          <Grid container spacing={3}>
+          {/* <Grid container spacing={3}>
             {children.map((list) => {
               const { subheader, items } = list;
 
               return (
-                <Grid key={subheader} item xs={12} md={subheader === 'Dashboard' ? 6 : 2}>
+                <Grid key={subheader} item xs={12} md={subheader === 'Dashboard' ? 3 : 2}>
                   <List disablePadding>
                     <ListSubheader
                       disableSticky
@@ -228,7 +228,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
                 </Grid>
               );
             })}
-          </Grid>
+          </Grid> */}
         </Popover>
       </>
     );

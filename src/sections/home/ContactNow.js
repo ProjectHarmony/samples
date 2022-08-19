@@ -9,10 +9,10 @@ import { MotionViewport, varFade } from '../../components/animate';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(2, 0),
+  padding: theme.spacing(3, 0),
   /* backgroundColor: '#02c4f0', */
   height: '300px',
-        backgroundImage: `url(${'/assets/batibootAssets/callbg.jpg'})`,
+        backgroundImage: `url(${'/assets/batibootAssets/officebg.webp'})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
@@ -23,7 +23,7 @@ const RootStyle = styled('div')(({ theme }) => ({
         width: '100%',
         marginTop: '20px',
         backdropFilter: "blur(200px)",
-        backgroundColor:"rgba(5, 61, 122, 0.8)"
+        
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -81,7 +81,7 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
 
 const BackgroundImg = styled(m.img)(({ theme }) => ({
   height: '300px',
-  backgroundImage: `url(${'/assets/batibootAssets/callbg.jpg'})`,
+  backgroundImage: `url(${'/assets/batibootAssets/officebg.webp'})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundAttachment: 'fixed',
@@ -132,6 +132,7 @@ export default function ContactNow() {
           <Grid item xs={12} md={12}>
             <Grid container spacing={2}>
               <Grid item xs={8} sx={{ mt: 10 }}>
+              <m.div variants={varFade().inRight}>
                 <Typography variant="h3" sx={{ mb: 5, }}>
                   Reach your destination 100% sure and safe
                 </Typography>
@@ -139,14 +140,15 @@ export default function ContactNow() {
                   We designed a detailed homepage layouts that will fit any transportation industry size. We will take
                   care of your cargo or your pasenger and deliver them safe and on time!
                 </Typography>
+                </m.div>
                 <Button
                   variant="contained"
                   sx={{
-                    mt: 5,
+                    mt: 2,
                     backgroundColor: '#02c4f0',
                     borderRadius: '20px',
                     p: '10px',
-                    '&:hover': { border: '1px solid #02c4f0', color: '#02c4f0', bgcolor: 'white' },
+                    
                   }}
                 >
                   CONTACT NOW

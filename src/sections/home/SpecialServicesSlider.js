@@ -6,6 +6,8 @@ import { useTheme } from '@mui/material/styles';
 import { Box, Stack, Paper, Avatar, Typography, CardHeader } from '@mui/material';
 // utils
 import { fDateTime } from '../../utils/formatTime';
+// mock
+import { _carouselsServices } from '../../_mock';
 // components
 import Label from '../../components/Label';
 import Image from '../../components/Image';
@@ -81,8 +83,8 @@ export default function SpecialServicesSlider({ title, subheader, list, sx, ...o
       />
 
       <Slider ref={carouselRef} {...settings}>
-        {list.map((item) => (
-          <BookingItem key={item.id} item={item} />
+        {_carouselsServices.map((item) => (
+          <CarouselItem key={item.id} item={item} />
         ))}
       </Slider>
     </Box>
@@ -91,7 +93,7 @@ export default function SpecialServicesSlider({ title, subheader, list, sx, ...o
 
 // ----------------------------------------------------------------------
 
-BookingItem.propTypes = {
+/* BookingItem.propTypes = {
   item: PropTypes.shape({
     avatar: PropTypes.string,
     bookdAt: PropTypes.instanceOf(Date),
@@ -101,27 +103,32 @@ BookingItem.propTypes = {
     roomNumber: PropTypes.string,
     roomType: PropTypes.string,
   }),
+}; */
+
+
+CarouselItem.propTypes = {
+  item: PropTypes.shape({
+    image: PropTypes.string,
+    title: PropTypes.string,
+  }),
 };
 
-function BookingItem({ item }) {
-  const { avatar, name, roomNumber, bookdAt, person, cover, roomType } = item;
+function CarouselItem({ item }) {
+  const { image, title } = item;
 
   return (
     <Paper sx={{ mx: 1.5, borderRadius: 2, bgcolor: 'background.neutral' }}>
       <Stack spacing={2.5} sx={{ p: 3, pb: 2.5 }}>
         <Stack direction="row" alignItems="center" spacing={2}>
-          <Avatar alt={name} src={avatar} />
+        {/*   <Avatar alt={name} src={avatar} /> */}
 
           <div>
-            <Typography variant="subtitle2">{name}</Typography>
+            <Typography variant="subtitle2">{title}</Typography>
 
-            <Typography variant="caption" sx={{ color: 'text.disabled', mt: 0.5, display: 'block' }}>
-              {fDateTime(bookdAt)}
-            </Typography>
           </div>
         </Stack>
 
-        <Stack direction="row" alignItems="center" spacing={3} sx={{ color: 'text.secondary' }}>
+    {/*     <Stack direction="row" alignItems="center" spacing={3} sx={{ color: 'text.secondary' }}>
           <Stack direction="row" alignItems="center" spacing={1}>
             <Iconify icon={'ic:round-vpn-key'} width={16} height={16} />
             <Typography variant="caption">Room {roomNumber}</Typography>
@@ -131,24 +138,47 @@ function BookingItem({ item }) {
             <Iconify icon={'eva:people-fill'} width={16} height={16} />
             <Typography variant="caption">{person} Person</Typography>
           </Stack>
+        </Stack> */}
+      </Stack>
+
+      <Box sx={{ p: 1, position: 'relative'}}>
+        {/* <Image src={image} ratio="1/1" sx={{ borderRadius: 1.5 }} /> */}
+        {image}
+      </Box>
+    </Paper>
+  
+  );
+}
+
+
+function BookingItem({ item }) {
+  const { avatar, name, roomNumber, bookdAt, person, cover, roomType } = item;
+
+  return (
+    <Paper sx={{ mx: 1.5, borderRadius: 2, bgcolor: 'background.neutral' }}>
+      <Stack spacing={2.5} sx={{ p: 3, pb: 2.5 }}>
+        <Stack direction="row" alignItems="center" spacing={2}>
+        {/*   <Avatar alt={name} src={avatar} /> */}
+
+          <div>
+            <Typography variant="subtitle2">{name}</Typography>
+          </div>
         </Stack>
+
+    {/*     <Stack direction="row" alignItems="center" spacing={3} sx={{ color: 'text.secondary' }}>
+          <Stack direction="row" alignItems="center" spacing={1}>
+            <Iconify icon={'ic:round-vpn-key'} width={16} height={16} />
+            <Typography variant="caption">Room {roomNumber}</Typography>
+          </Stack>
+
+          <Stack direction="row" alignItems="center" spacing={1}>
+            <Iconify icon={'eva:people-fill'} width={16} height={16} />
+            <Typography variant="caption">{person} Person</Typography>
+          </Stack>
+        </Stack> */}
       </Stack>
 
       <Box sx={{ p: 1, position: 'relative' }}>
-        <Label
-          variant="filled"
-          color={(roomType === 'king' && 'error') || (roomType === 'double' && 'info') || 'warning'}
-          sx={{
-            right: 16,
-            zIndex: 9,
-            bottom: 16,
-            position: 'absolute',
-            textTransform: 'capitalize',
-          }}
-        >
-          {roomType}
-        </Label>
-
         <Image src={cover} ratio="1/1" sx={{ borderRadius: 1.5 }} />
       </Box>
     </Paper>

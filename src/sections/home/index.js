@@ -12,9 +12,13 @@ export { default as LandingSecondPage } from './LandingSecondPage';
 export { default as LandingThirdPage } from './LandingThirdPage';
 /* export { default as LandingSlider } from './LandingSlider'; */
 export { default as ServicesButton } from './ServicesButton';
-export { default as TransitionOne } from './TransitionOne';
+/* export { default as TransitionOne } from './TransitionOne'; */
 export { default as LandingCounts } from './LandingCounts';
 export { default as SpecialServices } from './SpecialServices';
 export { default as SpecialServicesSlider } from './SpecialServicesSlider';
 export { default as ContactNow } from './ContactNow';
-export { default as CarouselLandingPageOne } from './CarouselLandingPageOne'
+export { default as CarouselLandingPageOne } from './CarouselLandingPageOne';
+export { default as TrackingOrder } from './TrackingOrder';
+export { default as Feedback } from './Feedback';
+export { default as Partners } from './Partners';
+export { default as Maps } from './Maps';

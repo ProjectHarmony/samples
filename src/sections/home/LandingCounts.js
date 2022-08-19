@@ -82,54 +82,67 @@ export default function LandingCounts() {
     <RootStyle sx={{ backgroundColor: '#02c4f0'}}>
       <Container component={MotionViewport}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={6} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
                 <Image src="\assets\countLogos\done.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
-                <Typography sx={{ marginTop: 3 }}>
-                  320 <br /> Projects Done
+                <Typography variant='h3' sx={{mt: 2}}>
+                  320
+                </Typography>
+                <Typography>
+                  Projects Done
                 </Typography>
               </Grid>
             </Grid>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={6} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
                 <Image src="\assets\countLogos\worldwide.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
-                <Typography sx={{ marginTop: 3 }}>
-                  72 <br /> Client's WorldWide
+              <Typography variant='h3' sx={{mt: 2}}>
+                  72
+                </Typography>
+                <Typography>
+                 Client's WorldWide
                 </Typography>
               </Grid>
             </Grid>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={6} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
                 <Image src="\assets\countLogos\truck.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
-                <Typography sx={{ marginTop: 3 }}>
+              <Typography variant='h3' sx={{mt: 2}}>
                   153
-                  <br /> Owned Vehicles
+                </Typography>
+                
+                <Typography>
+                   Owned Vehicles
                 </Typography>
               </Grid>
             </Grid>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={6} md={3}>
             <Grid container spacing={2}>
               <Grid item xs={5}>
                 <Image src="\assets\countLogos\people.svg" variants={varFade().inRight}/>
               </Grid>
               <Grid item xs={7}>
-                <Typography sx={{ marginTop: 3 }}>
-                  112 <br /> People in Team
+              <Typography variant='h3' sx={{mt: 2}}>
+                 112
+                </Typography>
+                
+                <Typography>
+                  People in Team
                 </Typography>
               </Grid>
             </Grid>

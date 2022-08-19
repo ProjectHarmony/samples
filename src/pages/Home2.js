@@ -18,11 +18,13 @@ import {
   LandingFirstPage,
   LandingSecondPage,
   LandingThirdPage,
-  TransitionOne,
   LandingCounts,
   SpecialServices,
   ContactNow,
-  CarouselLandingPageOne
+  CarouselLandingPageOne,
+  Feedback,
+  Partners,
+  Maps
 } from '../sections/home';
 
 // ----------------------------------------------------------------------
@@ -55,6 +57,9 @@ export default function Home2() {
           <ContactNow/>
           {/* <AboutUs /> */}
           <ContactUs />
+          <Feedback />
+          <Partners />
+          <Maps />
         </ContentStyle>
       </RootStyle>
     </Page>

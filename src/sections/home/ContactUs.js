@@ -9,16 +9,16 @@ import Iconify from '../../components/Iconify';
 import { MotionViewport, varFade } from '../../components/animate';
 import { ContactForm, ContactMap } from '../contact';
 import { FaqsList } from '../faqs';
+import TrackingOrder from './TrackingOrder';
 
 
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  paddingTop: theme.spacing(8),
   marginBottom: 20,
   [theme.breakpoints.up('md')]: {
-    paddingTop: theme.spacing(11),
+    paddingTop: theme.spacing(5),
   },
 }));
 
@@ -29,14 +29,18 @@ export default function HomeLookingFor() {
     <RootStyle>
       <Container component={MotionViewport}>
       <Grid container justifyContent="left">
-      <Grid item xs={12} md={5} sx={{mr: 10}}>
-      <ContactForm />
+      <Grid item xs={12} md={5} sx={{mr: 10, mt: 10}}>
+      <TrackingOrder />
       </Grid>
-      <Grid item xs={12} md={6} sx={{mt: 10}}>
+      <Grid item xs={12} md={6} sx={{mt: 3}}>
+      <m.div variants={varFade().inRight}>
       <Typography variant="h3" sx={{ mb: 5 }}>
             Frequently asked questions
           </Typography>
+         </m.div>
+         <m.div>
       <FaqsList />
+      </m.div>
       </Grid>
       </Grid>
       </Container>

@@ -4,17 +4,12 @@ import { alpha, useTheme, styled } from '@mui/material/styles';
 import { Box, Grid, Button, Container, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
-import { _bookings, _bookingNew, _bookingsOverview, _bookingReview } from '../../_mock';
 import { MotionViewport, varFade } from '../../components/animate';
-import { BookingIllustration, CheckInIllustration, CheckOutIllustration } from '../../assets';
-import { SpecialServicesSlider } from '.';
-
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(5, 0),
-  backgroundColor: '#005a87',
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -23,6 +18,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
   marginBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
+    marginBottom: 0,
   },
 }));
 
@@ -69,7 +65,7 @@ const variantScreenRight = {
 
 // ----------------------------------------------------------------------
 
-export default function SpecialServices() {
+export default function Partners() {
   const theme = useTheme();
 
   const isLight = theme.palette.mode === 'light';
@@ -83,24 +79,20 @@ export default function SpecialServices() {
   const screenRightAnimate = variantScreenRight;
 
   return (
-    <RootStyle>
-      <Container component={MotionViewport} sx={{ marginTop: 10 }}>
-        <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={3}>
-                <Typography variant="h3" sx={{ mb: 5, color: 'common.white' }}>
-                  SPECIAL SERVICES
-                </Typography>
-                <Typography sx={{ mb: 5, color: 'common.white' }}>
-                  Globally known for our ability to handle every last detail of our customers’ particular logistics and
-                  forwarding needs, TransCargo’s Special Services team takes care of all your logistics.
-                </Typography>
-              </Grid>
-              <Grid item xs={12} md={9}>
-                <SpecialServicesSlider title="Newest Booking" subheader="12 Booking" list={_bookingNew} />
-              </Grid> 
-            </Grid>
+    <RootStyle sx={{ /* backgroundColor: '#02c4f0' */ }}>
+      <Container component={MotionViewport}>
+        <Grid container spacing={10} justifyContent="center">
+          <Grid item xs={12} md={3} sx={{mt: 5}}>
+            <Image src="\assets\partners\partner1.png" alt="partner1" />
+          </Grid>
+          <Grid item xs={12} md={3} sx={{mt: 5}}>
+            <Image src="\assets\partners\partner2.png" alt="partner1" />
+          </Grid>
+          <Grid item xs={11} md={2}>
+            <Image src="\assets\partners\partner3.png" alt="partner1" />
+          </Grid>
+          <Grid item xs={11} md={2}>
+            <Image src="\assets\partners\partner4.png" alt="partner1" />
           </Grid>
         </Grid>
       </Container>

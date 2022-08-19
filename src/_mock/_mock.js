@@ -7,8 +7,9 @@ import { company } from './company';
 import { phoneNumber } from './phoneNumber';
 import { fullAddress, country } from './address';
 import { firstName, lastName, fullName } from './name';
-import { title, sentence, description } from './text';
+import { title, sentence, description, landingTitle, feedbackTitle, feedbackDescription } from './text';
 import { price, rating, age, percent } from './number';
+import { batibootImages, sliderPhotos , feedbackPhotos} from './imagesBatiboot';
 
 // ----------------------------------------------------------------------
 
@@ -33,6 +34,9 @@ const _mock = {
     title: (index) => title[index],
     sentence: (index) => sentence[index],
     description: (index) => description[index],
+    landingTitle: (index) => landingTitle[index],
+    feedbackTitle: (index) => feedbackTitle[index],
+    feedbackDescription: (index) => feedbackDescription[index],
   },
   number: {
     percent: (index) => percent[index],
@@ -46,6 +50,12 @@ const _mock = {
     product: (index) => `https://minimal-assets-api-dev.vercel.app/assets/images/products/product_${index + 1}.jpg`,
     avatar: (index) => `https://minimal-assets-api-dev.vercel.app/assets/images/avatars/avatar_${index + 1}.jpg`,
   },
+  imagesBatiboot: {
+    batibootImages: (index) => batibootImages[index],
+    sliderPhotos: (index) => sliderPhotos[index],
+    feedbackPhotos: (index) => feedbackPhotos[index],
+
+  }
 };
 
 export default _mock;

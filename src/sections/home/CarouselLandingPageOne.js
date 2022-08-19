@@ -24,8 +24,6 @@ const ContentItemStyle = styled('div')(({ theme }) => ({
   position: 'absolute',
   alignItems: 'center',
   padding: theme.spacing(3),
-  borderBottomLeftRadius: 16,
-  borderBottomRightRadius: 16,
   justifyContent: 'space-between',
   flexDirection: theme.direction === 'rtl' ? 'row-reverse' : 'row',
 }));
@@ -91,9 +89,8 @@ function CarouselItem({ item }) {
   const { image, title } = item;
 
   return (
-    <Box sx={{ position: 'relative', zIndex: 0, height:'600px' }}>
-      <Image alt={title} src={image} ratio="1/1" />
-
+    <Box sx={{ position: 'relative', zIndex: 0, height:'675px', }}>
+      {image}
       <ContentItemStyle>
         <Typography variant="h6" sx={{ color: 'common.white' }}>
           {item.title}
