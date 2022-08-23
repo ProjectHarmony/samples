@@ -58,10 +58,7 @@ export default function TrackingOrder({ img, price, title, description, ...other
           </Grid>
         </Grid> */}
         <Grid container spacing={2}>
-          <Grid item xs={2} sx={{ mt: 4, mr: -3}}>
-          <Image src="\assets\logos\magnifying.svg" alt="search" />
-          </Grid>
-          <Grid item xs={7}>
+          <Grid item xs={12} alignItems="center" justifyContent="space-between">
              <m.div variants={varFade().inRight}>
           <Typography variant="h4" align="center" sx={{ mt:5 }}>
                 Track Your Order
@@ -97,3 +94,4 @@ export default function TrackingOrder({ img, price, title, description, ...other
     </Box>
   );
 }
+

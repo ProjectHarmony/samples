@@ -38,9 +38,7 @@ export default function HomeLookingFor() {
             Frequently asked questions
           </Typography>
          </m.div>
-         <m.div>
       <FaqsList />
-      </m.div>
       </Grid>
       </Grid>
       </Container>

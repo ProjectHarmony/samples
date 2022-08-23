@@ -84,7 +84,7 @@ export default function SpecialServices() {
 
   return (
     <RootStyle>
-      <Container component={MotionViewport} sx={{ marginTop: 10 }}>
+      <Container component={MotionViewport} sx={{ marginTop: 5 }}>
         <Grid container spacing={5} justifyContent="center">
           <Grid item xs={12}>
             <Grid container spacing={2}>
@@ -97,7 +97,7 @@ export default function SpecialServices() {
                   forwarding needs, TransCargo’s Special Services team takes care of all your logistics.
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={9}>
+              <Grid item xs={12} md={9} sx={{mt: 5}}>
                 <SpecialServicesSlider title="Newest Booking" subheader="12 Booking" list={_bookingNew} />
               </Grid> 
             </Grid>

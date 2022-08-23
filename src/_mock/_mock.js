@@ -7,9 +7,9 @@ import { company } from './company';
 import { phoneNumber } from './phoneNumber';
 import { fullAddress, country } from './address';
 import { firstName, lastName, fullName } from './name';
-import { title, sentence, description, landingTitle, feedbackTitle, feedbackDescription } from './text';
+import { title, sentence, description, landingTitle, feedbackTitle, feedbackDescription, feedbackJobs } from './text';
 import { price, rating, age, percent } from './number';
-import { batibootImages, sliderPhotos , feedbackPhotos} from './imagesBatiboot';
+import { batibootImages, sliderPhotos , feedbackPhotos } from './imagesBatiboot';
 
 // ----------------------------------------------------------------------
 
@@ -37,6 +37,7 @@ const _mock = {
     landingTitle: (index) => landingTitle[index],
     feedbackTitle: (index) => feedbackTitle[index],
     feedbackDescription: (index) => feedbackDescription[index],
+    feedbackJobs: (index) => feedbackJobs[index]
   },
   number: {
     percent: (index) => percent[index],

@@ -10,11 +10,12 @@ export const _carouselsExample = [...Array(6)].map((_, index) => ({
   description: _mock.text.description(index),
 }));
 
-export const _carouselsFeedback = [...Array(6)].map((_, index) => ({
+export const _carouselsFeedback = [...Array(3)].map((_, index) => ({
   id: _mock.id(index),
   title: _mock.text.feedbackTitle(index),
   image: _mock.imagesBatiboot.feedbackPhotos(index),
   description: _mock.text.feedbackDescription(index),
+  jobs: _mock.text.feedbackJobs(index),
 }));
 
 export const _carouselsServices = [...Array(6)].map((_, index) => ({

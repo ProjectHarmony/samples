@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea } from '@mui/material';
+import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea, Popper} from '@mui/material';
 // components
 import Iconify from '../../components/Iconify';
+import DropdownMenu from './DropdownMenu';
 
 // ----------------------------------------------------------------------
 
@@ -23,9 +24,16 @@ const LinkStyle = styled(Link)(({ theme }) => ({
   },
 }));
 
-const ListItemStyle = styled(ListItem)(({ theme }) => ({
+const SubLinkStyle = styled((props) => (
+  <ListItem sx={{ p: 0 }}>
+    <Link target="_blank" rel="noopener" {...props}>
+      {props.children}
+    </Link>
+  </ListItem>
+))(({ theme }) => ({
   ...theme.typography.body2,
-  padding: 0,
+  display: 'flex',
+  alignItems: 'center',
   marginTop: theme.spacing(3),
   color: theme.palette.text.secondary,
   transition: theme.transitions.create('color'),
@@ -44,6 +52,7 @@ MenuDesktop.propTypes = {
 
 export default function MenuDesktop({ isOffset, isHome, navConfig }) {
   const { pathname } = useLocation();
+
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -80,30 +89,6 @@ export default function MenuDesktop({ isOffset, isHome, navConfig }) {
 
 // ----------------------------------------------------------------------
 
-IconBullet.propTypes = {
-  type: PropTypes.oneOf(['item', 'subheader']),
-};
-
-function IconBullet({ type = 'item' }) {
-  return (
-    <Box sx={{ width: 24, height: 16, display: 'flex', alignItems: 'center' }}>
-      <Box
-        component="span"
-        sx={{
-          ml: '2px',
-          width: 4,
-          height: 4,
-          borderRadius: '50%',
-          bgcolor: 'currentColor',
-          ...(type !== 'item' && { ml: 0, width: 8, height: 2, borderRadius: 2 }),
-        }}
-      />
-    </Box>
-  );
-}
-
-// ----------------------------------------------------------------------
-
 MenuDesktopItem.propTypes = {
   isHome: PropTypes.bool,
   isOffset: PropTypes.bool,
@@ -118,9 +103,13 @@ MenuDesktopItem.propTypes = {
 };
 
 function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
+  const { pathname } = useLocation();
+
   const { title, path, children } = item;
 
-  if (children) {
+  const isActive = (path) => pathname === path;
+
+/*   if (children) {
     return (
       <>
         <LinkStyle
@@ -144,16 +133,16 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
         <Popover
           open={isOpen}
           anchorReference="anchorPosition"
-          anchorPosition={{ top: 80, left: 10, }}
+          anchorPosition={{ top: 80, left: 0 }}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
           transformOrigin={{ vertical: 'top', horizontal: 'center' }}
           onClose={onClose}
           PaperProps={{
             sx: {
-              /* px: 3, */
+              px: 3,
               pt: 5,
               pb: 3,
-              right: 1,
+              right: 3,
               m: 'auto',
               borderRadius: 2,
               maxWidth: (theme) => theme.breakpoints.values.sm,
@@ -161,12 +150,12 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
             },
           }}
         >
-          {/* <Grid container spacing={3}>
+          <Grid container spacing={3}>
             {children.map((list) => {
               const { subheader, items } = list;
 
               return (
-                <Grid key={subheader} item xs={12} md={subheader === 'Dashboard' ? 3 : 2}>
+                <Grid key={subheader} item xs={12} md={subheader === 'Dashboard' ? 6 : 2}>
                   <List disablePadding>
                     <ListSubheader
                       disableSticky
@@ -183,16 +172,14 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
                     </ListSubheader>
 
                     {items.map((item) => (
-                      <ListItemStyle
+                      <SubLinkStyle
                         key={item.title}
-                        to={item.path}
-                        component={RouterLink}
-                        underline="none"
+                        href={item.path}
                         sx={{
-                          '&.active': {
+                          ...(isActive(item.path) && {
                             color: 'text.primary',
                             typography: 'subtitle2',
-                          },
+                          }),
                         }}
                       >
                         {item.title === 'Dashboard' ? (
@@ -222,17 +209,18 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
                             {item.title}
                           </>
                         )}
-                      </ListItemStyle>
+                      </SubLinkStyle>
                     ))}
                   </List>
                 </Grid>
               );
             })}
-          </Grid> */}
+          </Grid>
         </Popover>
       </>
     );
-  }
+  } */
+
 
   if (title === 'Documentation') {
     return (
@@ -265,5 +253,30 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
     >
       {title}
     </LinkStyle>
+    
+  );
+}
+
+// ----------------------------------------------------------------------
+
+IconBullet.propTypes = {
+  type: PropTypes.oneOf(['item', 'subheader']),
+};
+
+function IconBullet({ type = 'item' }) {
+  return (
+    <Box sx={{ width: 24, height: 16, display: 'flex', alignItems: 'center' }}>
+      <Box
+        component="span"
+        sx={{
+          ml: '2px',
+          width: 4,
+          height: 4,
+          borderRadius: '50%',
+          bgcolor: 'currentColor',
+          ...(type !== 'item' && { ml: 0, width: 8, height: 2, borderRadius: 2 }),
+        }}
+      />
+    </Box>
   );
 }

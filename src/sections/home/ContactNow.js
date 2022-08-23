@@ -11,7 +11,7 @@ import { MotionViewport, varFade } from '../../components/animate';
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(3, 0),
   /* backgroundColor: '#02c4f0', */
-  height: '300px',
+  height: '400px',
         backgroundImage: `url(${'/assets/batibootAssets/officebg.webp'})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -80,7 +80,7 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
 }));
 
 const BackgroundImg = styled(m.img)(({ theme }) => ({
-  height: '300px',
+  height: '500px',
   backgroundImage: `url(${'/assets/batibootAssets/officebg.webp'})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
@@ -125,15 +125,13 @@ export default function ContactNow() {
     <RootStyle sx={{
         
       }}>
-      <Container
-        component={MotionViewport}
-      >
+      <Container component={MotionViewport} >
         <Grid container spacing={2}>
           <Grid item xs={12} md={12}>
             <Grid container spacing={2}>
-              <Grid item xs={8} sx={{ mt: 10 }}>
+              <Grid item md={8} xs={12} sx={{ mt: 10 }}>
               <m.div variants={varFade().inRight}>
-                <Typography variant="h3" sx={{ mb: 5, }}>
+                <Typography variant="h3" sx={{ mb: 5 }}>
                   Reach your destination 100% sure and safe
                 </Typography>
                 <Typography>
@@ -154,8 +152,8 @@ export default function ContactNow() {
                   CONTACT NOW
                 </Button>
               </Grid>
-              <Grid item xs={4}>
-                <Image src="\assets\batibootAssets\callcenter.png" sx={{ width: '500px', height: '300px' }} />
+              <Grid item md={4} sx={{ display: { xs: 'none', md: 'block' }}} >
+                <Image src="\assets\batibootAssets\callcenter.png" sx={{ width: '500px', height: '400px' }} />
               </Grid>
             </Grid>
           </Grid>

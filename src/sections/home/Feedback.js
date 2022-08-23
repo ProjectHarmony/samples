@@ -4,7 +4,7 @@ import { m } from 'framer-motion';
 import { useState, useRef } from 'react';
 // @mui
 import { alpha, useTheme } from '@mui/material/styles';
-import { Box, Card, Paper, Button, Typography, CardContent } from '@mui/material';
+import { Box, Card, Paper, Button, Typography, CardContent, Grid } from '@mui/material';
 // _mock_
 import { _carouselsFeedback } from '../../_mock';
 // components
@@ -41,18 +41,18 @@ export default function Feedback() {
   };
 
   return (
-    <Box>
+    <Box sx={{position: 'relative'}}>
       <Slider ref={carouselRef} {...settings}>
         {_carouselsFeedback.map((item, index) => (
           <CarouselItem key={item.id} item={item} isActive={index === currentIndex} />
         ))}
       </Slider>
-     {/*  <CarouselArrowIndex
+      <CarouselArrowIndex
         index={currentIndex}
         total={_carouselsFeedback.length}
         onNext={handleNext}
         onPrevious={handlePrevious}
-      /> */}
+      />
       
     </Box>
   );
@@ -66,6 +66,7 @@ Feedback.propTypes = {
     description: PropTypes.string,
     image: PropTypes.string,
     title: PropTypes.string,
+    jobs: PropTypes.string
   }),
 };
 
@@ -74,7 +75,7 @@ function CarouselItem({ item, isActive }) {
   const { image, title } = item;
 
   return (
-    <Box sx={{ position: 'relative', height:"600px" }}>
+    <Box sx={{ position: 'cover' }}>
       {image}
       <Box
         sx={{
@@ -101,16 +102,23 @@ function CarouselItem({ item, isActive }) {
           color: 'common.white',
         }}
       >
+        <Grid>
         <m.div variants={varFade().inRight}>
-          <Typography variant="h3" gutterBottom>
-            {item.title}
+          <Typography variant="h4" gutterBottom sx={{xs: "noWrap"}}>
+          {item.description}
           </Typography>
         </m.div>
         <m.div variants={varFade().inRight}>
-          <Typography variant="body2" noWrap gutterBottom>
-            {item.description}
+          <Typography variant="h5" gutterBottom>
+          {item.title}
+          </Typography>
+          </m.div>
+          <m.div variants={varFade().inRight}>
+          <Typography variant="caption" gutterBottom>
+          {item.jobs}
           </Typography>
         </m.div>
+        </Grid>
       </CardContent>
     </Box>
   );

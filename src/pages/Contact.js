@@ -5,7 +5,7 @@ import { Grid, Container } from '@mui/material';
 import { _mapContact } from '../_mock';
 // components
 import Page from '../components/Page';
-import { ContactHero, ContactForm, ContactMap } from '../sections/contact';
+import { ContactHero, ContactForm, ContactMap, ContactMap2, ContactAddress } from '../sections/contact';
 
 // ----------------------------------------------------------------------
 
@@ -26,14 +26,14 @@ export default function Contact() {
 
         <Container sx={{ my: 10 }}>
           <Grid container spacing={10}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={5}>
               <ContactForm />
             </Grid>
-
-            <Grid item xs={12} md={6}>
-              <ContactMap contacts={_mapContact} />
+            <Grid item xs={12} md={7}>
+              <ContactMap2 />
             </Grid>
           </Grid>
+          <ContactAddress />
         </Container>
       </RootStyle>
     </Page>

@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 // @mui
 import { styled, useTheme } from '@mui/material/styles';
-import { Box, Button, AppBar, Toolbar, Container } from '@mui/material';
+import { Box, Button, AppBar, Toolbar, Container, Typography } from '@mui/material';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 import useResponsive from '../../hooks/useResponsive';
@@ -16,6 +16,8 @@ import Label from '../../components/Label';
 import MenuDesktop from './MenuDesktop';
 import MenuMobile from './MenuMobile';
 import navConfig from './MenuConfig';
+import DropdownMenu from './DropdownMenu';
+
 
 // ----------------------------------------------------------------------
 
@@ -56,7 +58,7 @@ export default function MainHeader() {
 
   const isDesktop = useResponsive('up', 'md');
 
-  const isHome = pathname === '/';
+  const isHome = pathname === '/home2';
 
   return (
     <AppBar sx={{ boxShadow: 0, bgcolor: 'white', color:'black' }}>
@@ -78,12 +80,15 @@ export default function MainHeader() {
         >
           <Logo />
 
-          <Label color="info" sx={{ ml: 1 }}>
+          <Typography variant="h5" sx={{ ml: 1 }}>
             Batiboot
-          </Label>
+          </Typography>
           <Box sx={{ flexGrow: 1 }} />
+          
 
           {isDesktop && <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />}
+
+          {isDesktop && <DropdownMenu />}
 
           <Button
             variant="contained"

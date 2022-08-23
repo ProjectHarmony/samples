@@ -4,6 +4,7 @@ import { useRef } from 'react';
 // @mui
 import { alpha, useTheme, styled } from '@mui/material/styles';
 import { Box, Card, Typography, IconButton } from '@mui/material';
+
 // utils
 import cssStyles from '../../utils/cssStyles';
 // _mock_
@@ -12,6 +13,8 @@ import { _carouselsExample } from '../../_mock';
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
 import { CarouselArrows } from '../../components/carousel';
+import useResponsive from '../../hooks/useResponsive';
+
 
 // ----------------------------------------------------------------------
 
@@ -23,7 +26,7 @@ const ContentItemStyle = styled('div')(({ theme }) => ({
   display: 'flex',
   position: 'absolute',
   alignItems: 'center',
-  padding: theme.spacing(3),
+  padding: theme.spacing(2),
   justifyContent: 'space-between',
   flexDirection: theme.direction === 'rtl' ? 'row-reverse' : 'row',
 }));
@@ -34,6 +37,9 @@ export default function CarouselLandingPageOne() {
   const theme = useTheme();
 
   const carouselRef = useRef(null);
+
+  
+  const isDesktop = useResponsive('up', 'md');
 
   const settings = {
     dots: false,
@@ -54,7 +60,7 @@ export default function CarouselLandingPageOne() {
   };
 
   return (
-    <Box>
+    <Box sx={{position: 'relative'}}>
       <CarouselArrows
         filled
         onNext={handleNext}
@@ -89,7 +95,7 @@ function CarouselItem({ item }) {
   const { image, title } = item;
 
   return (
-    <Box sx={{ position: 'relative', zIndex: 0, height:'675px', }}>
+    <Box sx={{ position: 'cover', zIndex: 0}}>
       {image}
       <ContentItemStyle>
         <Typography variant="h6" sx={{ color: 'common.white' }}>

@@ -16,7 +16,7 @@ const menuConfig = [
   {
     title: 'Home',
     icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
-    path: '/home2',
+    path: '/',
   },
 
   {
@@ -35,7 +35,8 @@ const menuConfig = [
     icon: <Iconify icon={'eva:file-fill'} {...ICON_SIZE} />,
     path: '/contact-us',
   },
-  { 
+
+/*   { 
     title: 'Sign-in',
     path: '/',
     icon: <Iconify icon={'eva:file-fill'} {...ICON_SIZE} />,
@@ -48,12 +49,44 @@ const menuConfig = [
           { title: 'Verify code', path: PATH_AUTH.verify },
         ],
       },
-      {
-        subheader: 'Dashboard',
-        items: [{ title: 'Dashboard', path: PATH_AFTER_LOGIN }],
-      },
     ]
   },
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* { 
+    title: 'Sign-in',
+    path: '/',
+    icon: <Iconify icon={'eva:file-fill'} {...ICON_SIZE} />,
+    children: [
+      {
+        items: [
+          { title: 'Login', path: PATH_AUTH.login },
+          { title: 'Register', path: PATH_AUTH.register },
+          { title: 'Reset password', path: PATH_AUTH.resetPassword },
+          { title: 'Verify code', path: PATH_AUTH.verify },
+        ],
+      },
+    ]
+  }, */
+
 
   /* {
     title: 'Pages',
