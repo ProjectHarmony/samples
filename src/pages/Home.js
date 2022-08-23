@@ -1,23 +1,18 @@
 // @mui
 import { styled } from '@mui/material/styles';
-
 // components
 import Page from '../components/Page';
 // sections
 import {
   HomeHero,
-/*   HomeMinimal, */
+  HomeMinimal,
   HomeDarkMode,
-  ContactUs,
+ /*  HomeLookingFor, */
   HomeColorPresets,
   HomePricingPlans,
   HomeAdvertisement,
   HomeCleanInterfaces,
-  AboutUs,
-  LandingFirstPage,
-  LandingSecondPage,
-  LandingThirdPage,
-  LandingSlider,
+/*   HomeHugePackElements, */
 } from '../sections/home';
 
 // ----------------------------------------------------------------------
@@ -32,15 +27,25 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 export default function HomePage() {
   return (
-    <Page title="Batiboot: Logistics">
-      
-      <LandingFirstPage />
+    <Page title="The starting point for your next project">
+      <HomeHero />
+
       <ContentStyle>
-      {/* <LandingSlider /> */}
-        <LandingThirdPage />
-        {/* <LandingSecondPage /> */}
-       <AboutUs />
-       <ContactUs />
+        <HomeMinimal />
+
+{/*         <HomeHugePackElements /> */}
+
+        <HomeDarkMode />
+
+        <HomeColorPresets />
+
+        <HomeCleanInterfaces />
+
+        <HomePricingPlans />
+{/* 
+        <HomeLookingFor /> */}
+
+        <HomeAdvertisement />
       </ContentStyle>
     </Page>
   );

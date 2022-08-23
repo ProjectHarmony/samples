@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Button, Box, Link, Container, Typography, Stack, Grid } from '@mui/material';
+import { Button, Box, Link, Container, Typography, Stack } from '@mui/material';
 // routes
 import { PATH_DASHBOARD } from '../../routes/paths';
 // components
@@ -74,32 +74,52 @@ export default function HomeHero() {
 
         <HeroImgStyle
           alt="hero"
-          src="/assets/ship.png"
+          src="https://minimal-assets-api-dev.vercel.app/assets/images/home/hero.png"
           variants={varFade().inUp}
         />
 
         <Container>
           <ContentStyle>
-          <Grid>
             <m.div variants={varFade().inRight}>
-            
-              <Typography variant="h3" sx={{ color: 'common.white' }}>
-                Need Quotation for your product?<br />welcome to
+              <Typography variant="h1" sx={{ color: 'common.white' }}>
+                Start a <br />
+                new project <br /> with
                 <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
-                  &nbsp;Batiboot.
+                  &nbsp;Minimal
                 </Typography>
               </Typography>
             </m.div>
 
             <m.div variants={varFade().inRight}>
-              <Typography variant="h3" sx={{ color: 'common.white' }}>
-                Your secured shipping lorem ipsum
+              <Typography sx={{ color: 'common.white' }}>
+                The starting point for your next project based on easy-to-customize MUI helps you build apps faster and
+                better.
               </Typography>
-           
             </m.div>
-          
-            {/* <Stack spacing={2.5} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
-             
+
+            <Stack spacing={2.5} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
+              <m.div variants={varFade().inRight}>
+                <TextIconLabel
+                  icon={
+                    <Image
+                      alt="sketch icon"
+                      src="https://minimal-assets-api-dev.vercel.app/assets/images/home/ic_sketch_small.svg"
+                      sx={{ width: 20, height: 20, mr: 1 }}
+                    />
+                  }
+                  value={
+                    <Link
+                      href="https://www.sketch.com/s/76388a4d-d6e5-4b7f-8770-e5446bfa1268"
+                      target="_blank"
+                      rel="noopener"
+                      color="common.white"
+                      sx={{ typography: 'body2' }}
+                    >
+                      Preview Sketch
+                    </Link>
+                  }
+                />
+              </m.div>
 
               <m.div variants={varFade().inRight}>
                 <TextIconLabel
@@ -123,10 +143,9 @@ export default function HomeHero() {
                   }
                 />
               </m.div>
-            </Stack> */}
+            </Stack>
 
             <m.div variants={varFade().inRight}>
-            {/* <Stack direction="row" spacing={1} sx={{ flexShrink: 0, mr: 1.5 }}>
               <Button
                 size="large"
                 variant="contained"
@@ -134,21 +153,27 @@ export default function HomeHero() {
                 to={PATH_DASHBOARD.root}
                 startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
               >
-                Log-in
+                Live Preview
               </Button>
-
-              <Button
-                size="large"
-                variant="contained"
-                component={RouterLink}
-                to={PATH_DASHBOARD.root}
-                startIcon={<Iconify icon={'eva:flash-fill'} width={20} height={20} />}
-              >
-                Sign-Up
-              </Button>
-              </Stack> */}
             </m.div>
-            </Grid>
+
+            <Stack spacing={2.5}>
+              <m.div variants={varFade().inRight}>
+                <Typography variant="overline" sx={{ color: 'primary.light' }}>
+                  Available For
+                </Typography>
+              </m.div>
+
+              <Stack direction="row" spacing={1.5} justifyContent={{ xs: 'center', md: 'flex-start' }}>
+                {['ic_sketch', 'ic_figma', 'ic_js', 'ic_ts', 'ic_nextjs'].map((resource) => (
+                  <m.img
+                    key={resource}
+                    variants={varFade().inRight}
+                    src={`https://minimal-assets-api-dev.vercel.app/assets/images/home/${resource}.svg`}
+                  />
+                ))}
+              </Stack>
+            </Stack>
           </ContentStyle>
         </Container>
       </RootStyle>

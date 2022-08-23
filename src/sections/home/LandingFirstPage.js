@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { m } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
@@ -29,14 +29,14 @@ const RootStyle = styled(m.div)(({ theme }) => ({
 }));
 
 const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
-  /* maxWidth: 520,  */
+  maxWidth: 520, 
   zIndex: 999,
   backgroundColor: 'rgba(51, 78, 111, 0.8)',
   margin: 'auto',
   width: '50%',
   padding: '10px',
   textAlign: 'center',
- /*  paddingTop: theme.spacing(15),
+  paddingTop: theme.spacing(15),
   paddingBottom: theme.spacing(15),
   marginTop: '150px',
   [theme.breakpoints.up('md')]: {
@@ -44,7 +44,7 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
     textAlign: 'left',
   },
   backgroundColor: 'rgba(51, 78, 111, 0.8)',
-  padding: '4em', */
+  padding: '4em',
 }));
 
 const HeroOverlayStyle = styled(m.img)({
@@ -63,11 +63,11 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
   height: '100vh',
   margin: 'auto',
   position: 'absolute',
-  /*   [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('lg')]: {
     right: '8%',
     width: 'auto',
     height: '48vh',
-  }, */
+  },
 }));
 
 
@@ -83,7 +83,7 @@ export default function LandingFirstPage() {
   return (
     <MotionContainer>
       <RootStyle>
-        {/* <HeroOverlayStyle alt="" src="" variants={varFade().in} /> */}
+        <HeroOverlayStyle alt="" src="" variants={varFade().in} />
 
         <HeroImgStyle
           alt="hero"
@@ -121,3 +121,4 @@ export default function LandingFirstPage() {
     </MotionContainer>
   );
 }
+ */
