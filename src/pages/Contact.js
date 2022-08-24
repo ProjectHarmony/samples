@@ -29,7 +29,7 @@ export default function Contact() {
             <Grid item xs={12} md={5}>
               <ContactForm />
             </Grid>
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={7} sx={{mt: 10}}>
               <ContactMap2 />
             </Grid>
           </Grid>

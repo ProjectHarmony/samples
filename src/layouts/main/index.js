@@ -15,7 +15,7 @@ export default function MainLayout() {
   const isHome = pathname === '/';
 
   return (
-    <Stack sx={{ minHeight: 1,}}>
+    <Stack sx={{ minHeight: 1 }}>
       <MainHeader />
 
       <Outlet />
@@ -33,15 +33,7 @@ export default function MainLayout() {
             bgcolor: 'background.default',
           }}
         >
-          <Container>
-            <Logo sx={{ mb: 1, mx: 'auto' }} />
-
-            <Typography variant="caption" component="p">
-              Batiboot
-              <br /> Contact Us&nbsp;
-              <Link href="">Here</Link>
-            </Typography>
-          </Container>
+         <MainFooter />
         </Box>
       )}
     </Stack>

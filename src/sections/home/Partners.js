@@ -82,16 +82,16 @@ export default function Partners() {
     <RootStyle sx={{ /* backgroundColor: '#02c4f0' */ }}>
       <Container component={MotionViewport}>
         <Grid container spacing={10} justifyContent="center">
-          <Grid item xs={12} md={3} sx={{mt: 5}}>
+          <Grid item xs={6} md={3} sx={{mt: 5}}>
             <Image src="\assets\partners\partner1.png" alt="partner1" />
           </Grid>
-          <Grid item xs={12} md={3} sx={{mt: 5}}>
+          <Grid item xs={6} md={3} sx={{mt: 5}}>
             <Image src="\assets\partners\partner2.png" alt="partner1" />
           </Grid>
-          <Grid item xs={11} md={2}>
+          <Grid item xs={6} md={2}>
             <Image src="\assets\partners\partner3.png" alt="partner1" />
           </Grid>
-          <Grid item xs={11} md={2}>
+          <Grid item xs={6} md={2}>
             <Image src="\assets\partners\partner4.png" alt="partner1" />
           </Grid>
         </Grid>

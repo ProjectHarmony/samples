@@ -2,12 +2,10 @@
 import { styled } from '@mui/material/styles';
 import { Grid, Container } from '@mui/material';
 // _mock
+import { QuotationFirst } from '../sections/quotation';
 import { _mapContact } from '../_mock';
 // components
 import Page from '../components/Page';
-import {
-    QuotationFirst,
-  } from '../sections/quotation';
 
 // ----------------------------------------------------------------------
 

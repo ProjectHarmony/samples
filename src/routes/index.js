@@ -164,6 +164,7 @@ export default function Router() {
         { path: 'services', element: < Services/>},
         { path: 'home2', element: <Home2/> },
         { path: 'faqs', element: <Faqs /> },
+        { path: 'quotation', element: <Quotation />},
       ],
     },
     { path: '*', element: <Navigate to="/404" replace /> },
@@ -229,6 +230,7 @@ const Services = Loadable(lazy(() => import('../pages/Services')))
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));
 const Maintenance = Loadable(lazy(() => import('../pages/Maintenance')));
 const Home2 = Loadable(lazy(() => import('../pages/Home2')));
+const Quotation = Loadable(lazy(() => import('../pages/Quotation')));
 const Pricing = Loadable(lazy(() => import('../pages/Pricing')));
 const Payment = Loadable(lazy(() => import('../pages/Payment')));
 const Page500 = Loadable(lazy(() => import('../pages/Page500')));

@@ -94,7 +94,7 @@ export default function MainHeader() {
             variant="contained"
             target="_blank"
             rel="noopener"
-            href="./page/Quotation">
+            href="/quotation">
             Need Quotation?
           </Button>
 

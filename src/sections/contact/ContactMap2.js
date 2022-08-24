@@ -64,7 +64,7 @@ export default function ContactMap2() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2585337715977!2d121.16665721471873!3d14.584338781385261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b96ac2d4fae9%3A0x2ccf32276312ee51!2sMediko%20Kapitolyo%20Multispecialty%20and%20Diagnostic%20Clinic!5e0!3m2!1sen!2sph!4v1657787273997!5m2!1sen!2sph"
             title="map"
             width="100%"
-            height="600"
+            height="300"
             style={{ border: 0 }}
             loading="lazy"
           />

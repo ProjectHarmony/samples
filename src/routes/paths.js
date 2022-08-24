@@ -32,6 +32,7 @@ export const PATH_PAGE = {
   about: '/about-us',
   contact: '/contact-us',
   faqs: '/faqs',
+  quotation: '/quotation',
   page403: '/403',
   page404: '/404',
   page500: '/500',

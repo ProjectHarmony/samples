@@ -9,7 +9,7 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 export default function AboutVision() {
   return (
-    <Container component={MotionViewport} sx={{ mt: 10, mb: 10 }}>
+    <Container component={MotionViewport} sx={{ mt: 3, mb: 10 }}>
        <Grid container justifyContent="left">
         <Grid item xs={12} sm={5} sx={{mr: 11}}>
         <m.div variants={varFade().inUp}>

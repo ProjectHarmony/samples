@@ -18,7 +18,7 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 const RootStyle = styled('div')(({ theme }) => ({
   textAlign: 'center',
-  paddingTop: theme.spacing(20),
+  paddingTop: theme.spacing(8),
   paddingBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
@@ -43,7 +43,7 @@ export default function AboutWhat() {
           {isDesktop && (
             <Grid item xs={12} md={6} lg={7} sx={{ pr: { md: 7 } }}>
               <Grid container spacing={3} alignItems="flex-end">
-                <Grid item xs={6}>
+                <Grid item md={6} xs={12}>
                   <m.div variants={varFade().inUp}>
                     <Image
                       alt="our office 1"
